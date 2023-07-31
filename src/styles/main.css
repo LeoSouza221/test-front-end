@@ -39,6 +39,12 @@ main {
   padding: 12px
 }
 
+.col-2 {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding: 12px
+}
+
 .d-flex {
   display: flex;
 }

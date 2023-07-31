@@ -3,15 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Main Page</title>
-  <link href="src/styles/main.css" rel="stylesheet" type="text/css" />
+  <title>Responsive Page</title>
+  <link href="../../styles/main.css" rel="stylesheet" type="text/css" />
+  <link href="../../styles/responsive-layout.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <h1>Page here</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex justify-center">
+        <h3>Flex</h3>
+      </div>
+      <div class="col d-flex justify-center">
+        <div class="box box-flex">
+          <div class="col-flex">
+            <div class="square square-yellow"></div>
+          </div>
+          <div class="col-flex">
+            <div class="square square-red"></div>
+          </div>
+          <div class="col-flex">
+            <div class="square square-green"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col d-flex justify-center">
+        <h3>Grid</h3>
+      </div>
+      <div class="col d-flex justify-center">
+        <div class="box box-grid">
+          <div class="col-grid">
+            <div class="square square-yellow"></div>
+          </div>
+          <div class="col-grid">
+            <div class="square square-red"></div>
+          </div>
+          <div class="col-grid">
+            <div class="square square-green"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

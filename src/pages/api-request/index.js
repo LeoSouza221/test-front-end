@@ -18,20 +18,41 @@ document.addEventListener('animationend', function (e) {
    }
 });
 
-function nextPage() {
+function showOverlay() {
+  document.getElementById("overlay").style.display = "block";
+};
+
+function hideOverlay() {
+  document.getElementById("overlay").style.display = "none";
+};
+
+function disableButton(buttonName) {
+  const buttonNext = document.getElementById(buttonName);
+
+  buttonNext.setAttribute("disabled", "");
+  buttonNext.classList.add("button-disabled");
+};
+
+function increasePage() {
   currentPage += 1;
 
-  getData();
+  disableButtonsAndGetData()
 };
 
-function previousPage() {
+function decreasePage() {
   currentPage -= 1;
 
-  getData();
+  disableButtonsAndGetData()
 };
 
+function disableButtonsAndGetData() {
+  disableButton('previous-button');
+  disableButton('next-button');
+  getData();
+}
+
 async function getData() {
-  loading = true
+  showOverlay()
 
   try {
     const response = await fetch(`https://api.jikan.moe/v4/top/anime?page=${currentPage}`);
@@ -45,11 +66,13 @@ async function getData() {
       document.documentElement.scrollTop = 0;
     
       formatItems(animes)
+    } else {
+      window.alert('Error: try again')
     }
   } catch(e) {
-    console.error(e);
+    window.alert(e)
   } finally {
-    loading = false;
+    hideOverlay();
     adjustButtons();
   }
 };
@@ -58,19 +81,15 @@ function adjustButtons() {
   const buttonNext = document.getElementById("next-button");
   const buttonPrevious = document.getElementById("previous-button");
 
-  console.log(hasNextPage)
-
   if (!hasNextPage && !buttonNext.hasAttribute('disabled')) {
-    buttonNext.setAttribute("disabled", "");
-    buttonNext.classList.add("button-disabled");
+    disableButton('next-button')
   } else {
     buttonNext.removeAttribute("disabled");
     buttonNext.classList.remove("button-disabled");
   }
 
-  if (currentPage === 1 && !buttonPrevious.hasAttribute('disabled')) {
-    buttonPrevious.setAttribute("disabled", "");
-    buttonPrevious.classList.add("button-disabled");
+  if (currentPage === 1 || !buttonPrevious.hasAttribute('disabled')) {
+    disableButton("previous-button");
   } else {
     buttonPrevious.removeAttribute("disabled");
     buttonPrevious.classList.remove("button-disabled");
@@ -80,7 +99,7 @@ function adjustButtons() {
 function getElement(anime, genres, startDate, endDate) {
   return `
     <div class="col-2 d-flex justify-center">
-      <div class="card">
+      <div class="card card-animes">
         <div class="card-rating d-flex justify-center align-center">
           <span class="card-rating-text">${(anime.rank ?? 0)}</span>
         </div>

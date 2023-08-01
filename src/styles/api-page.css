@@ -1,18 +1,53 @@
 #data {
+  min-height: 400px;
   margin-top: 2rem
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 20;
+}
+
+.max-height {
+  height: 100%;
+}
+
+.overlay-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   border-width: thin;
   display: block;
-  max-width: 250px;
   outline: none;
   text-decoration: none;
   transition-property: box-shadow, opacity;
   overflow-wrap: break-word;
   position: relative;
   white-space: normal;
+  background-color: #fff;
+  border-radius: 4px;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.card-animes {
+  max-width: 250px;
+}
+
+.card-loading {
+  width: 250px;
+  height: 250px;
 }
 
 .card-text-align {
@@ -99,6 +134,27 @@
 
 .button-previous, .button-next  {
   margin: 3rem 0.50rem;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 768px) {

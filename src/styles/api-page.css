@@ -1,3 +1,7 @@
+#data {
+  margin-top: 2rem
+}
+
 .card {
   border-width: thin;
   display: block;
@@ -13,6 +17,7 @@
 
 .card-text-align {
   text-align: center;
+  vertical-align: center;
   padding-top: 0;
 }
 
@@ -31,4 +36,67 @@
   z-index: 10;
   background: #fff;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 12px;
+  color: #fff;
+  width: 225px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0,0,0,.4);
+  transition: all 0.5s ease-in;
+}
+
+.card-description:hover {
+  background-color: rgba(0,0,0,.6);
+  transition: all 0.5s ease-in;
+  height: 321px;
+}
+
+.card-description .card-detail-hidden {
+  display: none;
+}
+
+.card-description:hover .card-detail-hidden {
+  display: block;
+  animation: fade-in 0.4s;
+}
+
+.card-description:not(:hover) .card-detail-hidden.did-fade-in {
+  display: block;
+  animation: fade-out 0.4s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.page-title {
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0.25rem 0;
+}
+
+.button-previous, .button-next  {
+  margin: 3rem 0.50rem 0 3rem;
 }

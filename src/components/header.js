@@ -3,11 +3,11 @@ const headerTemplate = document.createElement('template');
 headerTemplate.innerHTML = `
   <style>
     nav {
-      height: 40px;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color:  #0a0a23;
+      background-color:  #1867c0;
     }
 
     ul {
@@ -24,6 +24,7 @@ headerTemplate.innerHTML = `
       margin: 0 25px;
       color: #fff;
       text-decoration: none;
+      transition: box-shadow 0.2s, padding-bottom 0.2s ease-in
     }
     
     a:hover {

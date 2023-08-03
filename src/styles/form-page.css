@@ -1,5 +1,5 @@
 input {
-  min-height: 40px;
+  min-height: 50px;
 }
 
 textarea {
@@ -32,12 +32,21 @@ input:focus, textarea:focus {
   border: 2px solid #1867c0;
 }
 
+<<<<<<< Updated upstream
 .max-height {
   height: 100%;
+=======
+a {
+  text-decoration: none;
+  padding: 1rem;
+>>>>>>> Stashed changes
 }
 
 .card-form {
   max-width: 400px;
+  max-height: 640px;
+  padding: 1rem;
+  box-shadow: none;
 }
 
 .input-error {
@@ -58,8 +67,65 @@ input:focus, textarea:focus {
   font-size: 0.75rem;
   padding: 0.25rem 0;
   visibility: hidden;
+  min-height: 1rem;
 }
 
 .form-error-visible {
   visibility: visible;
+}
+
+.col-7 {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding: 12px
+}
+
+.col-5 {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 12px
+}
+
+.relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: #fff;
+  animation: show-text 0.5s ease-in;
+}
+
+@keyframes show-text {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+.box-gradient {
+  background: rgb(0,145,218);
+  background: linear-gradient(180deg, rgba(24,103,192,1) 0%, rgba(0,181,209,1) 35%, rgba(0,211,173,1) 100%);
+  height: 654px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+@media (max-width: 1200px) {
+  .box-gradient {
+    display: none;
+  }
+
+  .box-form {
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 100%;
+  }
 }

@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Page</title>
-  <link href="../../styles/main.css" rel="stylesheet" type="text/css" />
-  <link href="../../styles/form-page.css" rel="stylesheet" type="text/css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="../src/styles/main.css" rel="stylesheet" type="text/css" />
+  <link href="../src/styles/form-page.css" rel="stylesheet" type="text/css" />
+  <script src="../src/components/header.js" type="text/javascript" defer></script>
+  <script src="../src/components/footer.js" type="text/javascript" defer></script>
+  <script src="../src/scripts/form.js" type="text/javascript" defer></script>
 </head>
 <body>
-  <div class="container max-height">
+  <header-component></header-component>
+  <main class="container">
     <div class="row max-height d-flex justify-center align-center">
       <div class="card card-form">
         <form id="form-validation" name="form-validation" class="row" onsubmit="validateForm()">
@@ -45,7 +46,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
+  <footer-component></footer-component>
 </body>
 <script src="index.js" type="text/javascript" defer></script>
 </html>

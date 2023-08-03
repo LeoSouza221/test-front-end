@@ -4,14 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Page</title>
-  <link href="src/styles/main.css" rel="stylesheet" type="text/css" />
+  <link href="../../styles/main.css" rel="stylesheet" type="text/css" />
+  <link href="../../styles/form-page.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <h1>Page here</h1>
+  <div class="container max-height">
+    <div class="row max-height d-flex justify-center align-center">
+      <div class="card card-form">
+        <form id="form-validation" name="form-validation" class="row" onsubmit="validateForm()">
+          <div class="col d-flex justify-center">
+            <h3 class="text-2">Form Validation</h3>
+          </div>
+          <div class="col">
+            <label class="form-label" for="form-name">Name</label>
+            <input name="form-name" id="name" type="text">
+            <div class="form-error">
+              <span class="error-message"></span>
+            </div>
+          </div>
+          <div class="col">
+            <label class="form-label" for="form-email">Email</label>
+            <input name="form-email" id="email" type="email">
+            <div class="form-error">
+              <span class="error-message"></span>
+            </div>
+          </div>
+          <div class="col">
+            <label class="form-label" for="message">Message</label>
+            <textarea name="message" id="message" rows="4" cols="50"></textarea>
+            <div class="form-error">
+              <span class="error-message"></span>
+            </div>
+          </div>
+          <div class="col d-flex justify-center">
+            <button class="button button-primary button-block" type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
+<script src="index.js" type="text/javascript" defer></script>
 </html>

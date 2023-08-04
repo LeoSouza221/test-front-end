@@ -9,18 +9,25 @@
   <script src="../src/components/header.js" type="text/javascript" defer></script>
   <script src="../src/components/footer.js" type="text/javascript" defer></script>
   <script src="../src/scripts/button-increase.js" type="text/javascript" defer></script>
+  <script src="../src/scripts/change-modal-state.js" type="text/javascript" defer></script>
 </head>
 <body>
   <header-component></header-component>
   <main class="container">
-    <div class="row d-flex justify-center">
-      <p class="text-1">My counter: </p>
-      <p id="number" class="text-1">0</p> 
-    </div>
-    <div class="row">
-      <div class="col d-flex justify-center">
-        <button class="button button-decrease" name="decrease" onclick="decreaseCounter()">Decrease counter</button>
-        <button class="button button-primary button-decrease" name="increase" onclick="increaseCounter()">Increase counter</button>
+    <div class="row max-height d-flex justify-center align-center">
+      <div class="card">
+        <div class="row">
+          <div class="col d-flex justify-center">
+            <p class="text-1">Counter</p>
+          </div>
+          <div class="col d-flex justify-center">
+            <p id="number" class="text-3">0</p> 
+          </div>
+          <div class="col d-flex justify-center">
+            <button class="button button-decrease" name="decrease" onclick="decreaseCounter()">Decrease counter</button>
+            <button class="button button-primary button-decrease" name="increase" onclick="increaseCounter()">Increase counter</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>

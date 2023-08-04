@@ -3,8 +3,22 @@ const nameElement = document.querySelector('#name');
 const emailElement = document.querySelector('#email');
 const messageElement = document.querySelector('#message');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+});
+
+form.addEventListener('input', function (event) {
+  switch (event.target.id) {
+    case 'name':
+      checkName();
+      break;
+    case 'email':
+      checkEmail();
+      break;
+    case 'message':
+      checkMessage();
+      break;
+  }
 });
 
 const errorMessages = {
@@ -84,7 +98,7 @@ function checkEmail() {
     valid = true;
   }
 
-  return true;
+  return valid;
 }
 
 function checkMessage() {
@@ -100,7 +114,7 @@ function checkMessage() {
     valid = true
   }
 
-  return true
+  return valid
 }
 
 function validateForm() {

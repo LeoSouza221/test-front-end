@@ -8,43 +8,48 @@
   <link href="../src/styles/responsive-layout.css" rel="stylesheet" type="text/css" />
   <script src="../src/components/header.js" type="text/javascript" defer></script>
   <script src="../src/components/footer.js" type="text/javascript" defer></script>
+  <script src="../src/scripts/change-modal-state.js" type="text/javascript" defer></script>
 </head>
 <body>
   <header-component></header-component>
   <main class="container">
-    <div class="row">
-      <div class="col d-flex justify-center">
-        <h3>Flex</h3>
-      </div>
-      <div class="col d-flex justify-center">
-        <div class="box box-flex">
-          <div class="col-flex">
-            <div class="square square-yellow"></div>
+    <div class="row max-height d-flex justify-center align-center">
+      <div class="row">
+        <div class="col">
+          <div class="col d-flex justify-center">
+            <h3>Flex</h3>
           </div>
-          <div class="col-flex">
-            <div class="square square-red"></div>
-          </div>
-          <div class="col-flex">
-            <div class="square square-green"></div>
+          <div class="col d-flex justify-center">
+            <div class="box box-flex">
+              <div class="col-flex">
+                <div class="square square-yellow"></div>
+              </div>
+              <div class="col-flex">
+                <div class="square square-red"></div>
+              </div>
+              <div class="col-flex">
+                <div class="square square-green"></div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col d-flex justify-center">
-        <h3>Grid</h3>
-      </div>
-      <div class="col d-flex justify-center">
-        <div class="box box-grid">
-          <div class="col-grid">
-            <div class="square square-yellow"></div>
+        <div class="col">
+          <div class="col d-flex justify-center">
+            <h3>Grid</h3>
           </div>
-          <div class="col-grid">
-            <div class="square square-red"></div>
-          </div>
-          <div class="col-grid">
-            <div class="square square-green"></div>
-          </div>
+          <div class="col d-flex justify-center">
+            <div class="box box-grid">
+              <div class="col-grid">
+                <div class="square square-yellow"></div>
+              </div>
+              <div class="col-grid">
+                <div class="square square-red"></div>
+              </div>
+              <div class="col-grid">
+                <div class="square square-green"></div>
+              </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

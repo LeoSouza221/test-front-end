@@ -118,6 +118,12 @@ main {
   letter-spacing: normal;
 }
 
+.text-3 {
+  font-size: 6rem!important;
+  line-height: 6rem;
+  letter-spacing: -.015625em!important;
+}
+
 .card {
   border-width: thin;
   display: block;

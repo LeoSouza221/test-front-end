@@ -9,13 +9,15 @@
   <script src="../src/components/header.js" type="text/javascript" defer></script>
   <script src="../src/components/footer.js" type="text/javascript" defer></script>
   <script src="../src/scripts/form.js" type="text/javascript" defer></script>
+  <script src="../src/scripts/change-modal-state.js" type="text/javascript" defer></script>
 </head>
 <body>
+  <header-component></header-component>
   <div class="container max-height">
     <div class="row max-height d-flex justify-center align-center">
       <div class="card">
         <div class="row relative">
-          <div class="col-5 max-height box-gradient">
+          <div class="col-5 box-gradient">
             <div class="row max-height d-flex justify-center align-center">
               <div class="text-center">
                 <h3 class="text-3 text-white">Hello, friend!</h3>
@@ -38,7 +40,7 @@
                 </div>
                 <div class="col">
                   <label class="form-label" for="form-email">Email</label>
-                  <input name="form-email" id="email" type="email">
+                  <input name="form-email" id="email" type="text">
                   <div class="form-error">
                     <span class="error-message"></span>
                   </div>
@@ -70,6 +72,6 @@
       </div>
     </div>
   </div>
+  <footer-component></footer-component>
 </body>
-<script src="index.js" type="text/javascript" defer></script>
 </html>

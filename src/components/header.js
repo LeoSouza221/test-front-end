@@ -124,10 +124,10 @@ headerTemplate.innerHTML = `
   <header>
     <nav id="menu-desktop">
       <ul>
-        <li><a href="/pages/button-increase.html">Button</a></li>
-        <li><a href="/pages/responsive-layout.html">Responsive Layout</a></li>
-        <li><a href="/pages/api-request.html">Api Request</a></li>
-        <li><a href="/pages/form.html">Form</a></li>
+        <li><a href="/pages/button-increase">Button</a></li>
+        <li><a href="/pages/responsive-layout">Responsive Layout</a></li>
+        <li><a href="/pages/api-request">Api Request</a></li>
+        <li><a href="/pages/form">Form</a></li>
       </ul>
     </nav>
     <nav id="menu-mobile">
@@ -140,16 +140,16 @@ headerTemplate.innerHTML = `
       </div>
       <div id="floating-menu">
         <div class="menu-item">
-          <a href="/pages/button-increase.html">Button</a>
+          <a href="/pages/button-increase">Button</a>
         </div>
         <div class="menu-item">
-          <a href="/pages/responsive-layout.html">Responsive Layout</a>
+          <a href=/pages/responsive-layout">Responsive Layout</a>
         </div>
         <div class="menu-item">
-          <a href="/pages/api-request.html">Api Request</a>
+          <a href="/pages/api-request">Api Request</a>
         </div>
         <div class="menu-item">
-          <a href="/pages/form.html">Form</a>
+          <a href="/pages/form">Form</a>
         </div>
         </ul>
       </div>

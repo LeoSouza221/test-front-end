@@ -105,7 +105,7 @@ function getElement(anime, genres, startDate, endDate) {
         </div>
         <div class="row">
           <div class="col d-flex justify-center card-image">
-            <img src="${anime.images.jpg.image_url}" alt="" width="225px" height="321px">
+            <img src="${anime.images.jpg.image_url}" alt="${(anime.title_english ?? anime.title_japanese)}" width="225px" height="321px">
             <div class="card-description">
               <div class="row card-description-content">
                 <div class="col">

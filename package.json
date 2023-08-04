@@ -4,7 +4,6 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "serve": "node app.js",
     "start": "http-server -p 8080 -o"
   },
   "devDependencies": {

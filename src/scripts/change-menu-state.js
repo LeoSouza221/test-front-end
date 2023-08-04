@@ -1,7 +1,7 @@
 let isMenuOpen = false
 
 
-function changeModalState() {
+function changeMenuState() {
   const menu = document.querySelector("header-component").shadowRoot.getElementById('floating-menu')
 
   if (isMenuOpen) {

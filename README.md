@@ -1,6 +1,6 @@
 # Test front end
 
-[Imgur](https://i.imgur.com/C9L7CAk.jpg)
+![demo-image](https://i.imgur.com/C9L7CAk.jpg)
 
 [Demo](https://leosouza221.netlify.app/)
 
